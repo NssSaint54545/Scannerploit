@@ -1,0 +1,754 @@
+@echo off
+:start
+title Lazy Script
+cls
+color A
+echo.
+echo ------------------------------------------------------------
+echo !                                                          !
+echo ! Creator        :- WH Rasestsu                            !
+echo ! YT Channel     :- WH Rasestsu                            !
+echo ! Contact E-mail :- gadgetclass112@gmail.com               !
+echo ! Project name   :- Lazy Script (for Windows)              !
+echo ! Based on       :- CMD Programming/Batch Programming      !
+echo ! Motive         :- To make the use of CMD easy, and       !
+echo !                   it can use by beginners also.          !
+echo !                                                          !
+echo ------------------------------------------------------------
+echo.
+echo.
+echo ----
+echo    /  ---
+echo   /     /  --
+echo  /     /    /   
+echo ----  ---  --  O
+echo                  O
+echo                    O
+echo                      O
+echo                 !  !-----1------------------- !
+echo                 !  !     1    Sleeping...zz ! !
+echo                 !  !-----1------------------- !
+echo                 -------------------------------
+echo                 !                             !
+echo                 !          Bed                !
+echo                 !                             !
+echo                 -------------------------------  
+echo.
+echo --------------------------------------------------------------------------------------------------------------------------------------------
+echo                                                                Lazy Script
+echo --------------------------------------------------------------------------------------------------------------------------------------------
+echo  [1]  Create a folder                                [12] Fourtune Teller Game                    [23] Lookup any system/network                         
+echo  [2]  Remove a folder                                [13] Start an application                    [24] Change text color of CMD
+echo  [3]  Calculator                                     [14] Lock a file/folder                      [25] Change prompt of CMD
+echo  [4]  IP finder                                      [15] Unlock a file/folder                    [26] Change title of CMD
+echo  [5]  List all folder/files on current directory     [16] Create your own custom CMD Terminal     [27] Start a new terminal     
+echo  [6]  Shutdown PC                                    [17] Hide file/folder                        [28] Display current time
+echo  [7]  Restart PC                                     [18] Unhide file/folder                      [29] Display current date
+echo  [8]  Copy file/folder                               [19] List all working tasks                  [30] Find any file
+echo  [9]  Move file/folder                               [20] Close any task                          [31] Who am i
+echo  [10] Rename file/folder                             [21] See content of a file                   [32] Display current working directory
+echo  [11] Fake Hacking simulator                         [22] Ping a system/network                   [33] Start CMD commands tutorial
+echo.
+echo                                                              [34] Exit
+echo --------------------------------------------------------------------------------------------------------------------------------------------
+echo.
+
+set /p choice= Enter your choice [1-34]:-
+
+goto %choice%
+
+:1
+	cls
+	title Creating Folder
+	color 6
+	echo.
+	echo !\-------------
+	echo ! \           !
+	echo !  \          !
+	echo ! F \         !
+	echo ! O !         ! 
+	echo ! L !         !
+	echo ! D !         !
+	echo.! E !         !
+	echo ! R !         !
+	echo  \  !----------
+	echo   \ !
+	echo    \!
+	echo.
+	echo.
+	echo -----------------
+	echo !               !
+	echo !               !
+	echo !               !
+	echo !    Folder     !
+	echo !               !
+	echo !              / \
+	echo !             !   !
+	echo !             !   !
+	echo !             !   !
+	echo -------------------
+	echo.
+	set /p fname= Enter folder name:-
+	mkdir %fname%
+	echo Folder is created.
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit
+:2
+	cls
+	title Removing Folder
+	color 6
+	echo.
+	echo !\-------------
+	echo ! \           !
+	echo !  \          !
+	echo ! F \         !
+	echo ! O !         ! 
+	echo ! L !         !
+	echo ! D !         !
+	echo.! E !         !
+	echo ! R !         !
+	echo  \  !----------
+	echo   \ !
+	echo    \!
+	echo.
+	echo.
+	echo -----------------
+	echo !               !
+	echo !               !
+	echo !               !
+	echo !    Folder     !
+	echo !               !
+	echo !              / \
+	echo !             !   !
+	echo !             !   !
+	echo !             !   !
+	echo -------------------
+	echo.
+	set /p fname= Enter folder name:-
+	rmdir /S %fname%
+	echo Folder is Removed.
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit
+:3
+	cls
+	title Calculating equation
+	color F
+	echo.
+	echo ---------------------------------------
+	echo !        !         !             /    !
+	echo !        !         !            /     !
+	echo !        !         !           /      !
+	echo !        !         !          /       !
+	echo ! -------!-------- !         /        !
+	echo !        !         !        /         !
+	echo !        !         !       /          !
+	echo !        !         !      /           !
+	echo !        !         !     /            !
+	echo !                  !                  !
+	echo !~~~~~~~~~~~~~~~~~ 1 ~~~~~~~~~~~~~~~~~!
+	echo !                  !                  !
+	echo !   \        /     !                  !
+	echo !    \      /      !                  !
+	echo !     \    /       !                  !
+	echo !      \  /        !                  !
+	echo !       \/         ! ---------------- !
+	echo         /\         !                  !
+	echo !      /  \        !                  !
+	echo !     /    \       !                  !
+	echo !    /      \      !                  !
+	echo ---------------------------------------
+	echo.
+	echo [1] Use graphical calculator
+	echo [2] Use command line calculator
+	echo.
+	set /p choice= Choose [1-2]:-
+	if %choice%==1 goto gui
+	if %choice%==2 goto cmd
+	:cmd
+	cls
+	title Command line calculator
+	set /p math= Enter Equation:- 
+	set /a result= %math%
+	echo %result% is the answer.
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit
+	:gui
+		start calc
+		echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:4
+	cls
+	title Finding IP
+	ipconfig
+	ipconfig > ip.txt
+	echo File name is ip.txt
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit
+:5
+	cls
+	title Listing directory
+	dir
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit
+:6
+	cls
+	title Shutdown processing
+	set /p time= In how much time you need to shutdown PC:-
+	shutdown /s /t %time%
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit
+:7
+	cls
+	title Restart processing
+	set /p time= In how much time you need to Restart PC (Default time is 1 second):-
+	if %time%==1 shutdown /r /t 1
+	shutdown /r /t %time%
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit	
+:8
+	cls
+	title Copying file/folder
+	set /p path1= Enter the path where file/folder is:-
+	echo.
+	set /p path2= Enter the path for file/folder destination:-
+	copy %path1% %path2%
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit 
+:9
+	cls
+	title Moving file/folder
+	set /p path1= Enter the path where file/folder is:-
+	echo.
+	set /p path2= Enter the path for file/folder destination:-
+	move %path1% %path2%
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit 
+:10
+	cls
+	title Renaming file/folder
+	set /p path1= Enter current file/folder name:-
+	echo.
+	set /p path2= Enter new file/folder name:-
+	move %path1% %path2%
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit
+:11
+	cls	
+	title Checking Banks Database!!
+	cd / && dir/S
+	echo.
+	echo.
+	set /p cont= Do you want to continue [yes/no]:-
+	pause
+	goto %cont%
+	:yes
+		cls
+		goto start
+	:no
+		exit
+	
+:12
+	cls
+	title Fourtune Teller
+	set /p luck= Choice a number between [1-20]:-
+	if %luck%==3 goto good
+	if %luck%==7 goto good
+	if %luck%==14 goto good
+	if %luck%==15 goto good
+	if %luck%==19 goto good
+	goto bad
+	:good
+		echo Good fourtune today!!
+		echo.
+		echo Byee....
+		echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+	:bad
+		echo Bad fourtune today!!
+		echo.
+		echo Byee......
+		echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:13
+	cls
+	title Application starter
+	set /p name= Enter application name:-
+	start %name%.exe
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:14
+	cls
+	title File/Folder Locker
+	set /p fname= Enter file/folder name:-
+	cacls %fname% /P everyone:n
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:15
+	cls
+	title File/Folder Unlocker
+	set /p fname= Enter file/folder name:-
+	cacls %fname% /P everyone:f
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:16
+	cls
+	title Custom CMD Terminal Creator
+	set /p title= 1) Enter title for you custom CMD terminal:-
+	echo.
+	echo Here below are the signs for you own prompt:-
+	echo.
+	prompt /?
+	echo.
+	echo.
+	echo Example of a prompt= root@kali$$:-
+	echo.
+	echo Result of above example will be= root@kali$:-
+	echo.
+	set /p prompt= 2) Enter your own prompt:-
+	echo.
+	echo Here below are the digits/letter to change color of word
+	echo.
+	help color
+	echo.
+	echo.
+	set /p color= 3) Enter digit/letter of color you want:-
+	echo.
+ 	echo Thanks for you info
+	echo.
+	echo Here is your customized CMD Terminal
+	echo.
+	echo @echo off > cm.bat
+	echo start cmd.exe >> cm.bat
+	echo title %title% >> cm.bat
+	echo prompt %prompt% >> cm.bat
+	echo color %color% >> cm.bat
+	start cm.bat
+:17
+	cls
+	title File/Folder Hidder
+	echo.
+	set /p fname= Enter file/folder name:-
+	attrib +r +s +h %fname%
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:18
+	cls
+	title File/Folder Unhidder
+	echo.
+	set /p fname= Enter file/folder name:-
+	attrib -r -s -h %fname%
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:19
+	cls
+	title Working Tasks List
+	tasklist
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:20
+	cls
+	title Task Killer
+	echo [1] Using PID
+	echo [2] Using Image Name
+	set /p choice= Enter you choice [1-2]:-
+	goto %choice%
+	:1
+		cls
+		title Killing Tasks using PID numbers
+		set /p no= Enter Task PID number to kill:-
+		taskkill /PID %no%
+		echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+	:2
+		cls
+		title Killing Tasks using Image name
+		set /p name= Enter name of task:-
+		taskkill /IM %name%
+		echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:21
+	cls
+	title File content viewer
+	set /p fname= Enter file name:-
+	type %fname% 
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:22
+	cls
+	title Ping
+	set /p target= Enter target IP/url:-
+	ping %target%
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:23
+	cls
+	title System/Network Looker
+	set /p target= Enter target IP:-
+	nslookup %target%
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:24
+	cls
+	title Color of CMD
+	help color
+	set /p color= Choice digit/letter of color you want:-
+	color %color%
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:25
+	cls
+	title Prompt changer
+	prompt /?
+	set /p prompt= Enter your own prompt:-
+	prompt %prompt%
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:26
+	cls
+	title Title changer
+	set /p title= Enter the title you want to be:-
+	title %title%
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:27
+	start
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:28
+	cls
+	title Current time
+	time /T
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:29
+	cls
+	title Current date
+	date /T
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:30
+	cls
+	title File finder
+	set /p fname= Enter file name:-
+	where %fname%
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:31
+	cls
+	echo.
+	echo You are %USERNAME%.
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:32
+	cls
+	title Current working directory
+	path
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:33
+	cls
+	title CMD commands tutorial
+	echo.
+	echo Welcome to CMD commands tutorial.
+	pause
+	echo.
+	echo Here you will learn some basics CMD commands.
+	pause
+	echo.
+	echo Take note and pen and get Ready!!
+	pause
+	echo.
+	echo Your first command will be "dir".
+	pause
+	echo.
+	echo "dir" help you to see list of files and folders in a directory.
+	pause
+	cls
+	echo.
+	echo Second command is "cd".
+	pause
+	echo.
+	echo "cd" helps in changing directory/folder.
+	pause
+	cls
+	echo.
+	echo Third command is "mkdir".
+	pause
+	echo.
+	echo "mkdir" helps in creating a foler.
+	pause
+	cls
+	echo.
+	echo Fourth command is "rmdir".
+	pause
+	echo.
+	echo "rmdir" helps in removing folder.
+	pause
+	cls
+	echo.
+	echo Fifth command is "copy".
+	pause
+	echo.
+	echo "copy" helps in copying files/folders.
+	pause
+	cls
+	echo.
+	echo Sixsth and the last command "move".
+	pause
+	echo.
+	echo "move" helps in moving file/folder.
+	pause
+	cls
+	echo.
+	echo So here are the list of CMD commands you learned:-
+	echo [1] dir
+	echo [2] cd
+	echo [3] mkdir
+	echo [4] rmdir
+	echo [5] copy
+	echo [6] move
+	echo.
+	echo I hope you learned it properly.
+	echo Byeee..... Take Care........
+	echo.
+		set /p cont= Do you want to continue [yes/no]:-
+		pause
+		goto %cont%
+		:yes
+			cls
+			goto start
+		:no
+			exit
+:34
+	exit
